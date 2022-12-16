@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state/index";
-import { SinglePostWidget } from "./SinglePostWidget";
+import SinglePostWidget from "./SinglePostWidget";
 
 const FeedWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
@@ -14,8 +14,8 @@ const FeedWidget = ({ userId, isProfile = false }) => {
       headers: { Authorization: `Bearer ${token}` },
     });
 
-    const data = await response.json();
-    dispatch(setPosts(data));
+    const data = await response.json();    
+    dispatch(setPosts({ posts: data }));
   };
 
   const getUserPosts = async () => {
@@ -27,8 +27,8 @@ const FeedWidget = ({ userId, isProfile = false }) => {
       }
     );
 
-    const data = await response.json();
-    dispatch(setPosts(data));
+    const data = await response.json();    
+    dispatch(setPosts({ post: data }));
   };
 
   useEffect(() => {
@@ -41,11 +41,11 @@ const FeedWidget = ({ userId, isProfile = false }) => {
 
   return (
     <>
-      {posts.map(
+      {posts?.map(
         ({
           _id,
           userId,
-          firstname,
+          firstName,
           lastName,
           description,
           location,
@@ -58,7 +58,7 @@ const FeedWidget = ({ userId, isProfile = false }) => {
             key={_id}
             postId={_id}
             postUserId={userId}
-            name={`${firstname} ${lastname}`}
+            name={`${firstName} ${lastName}`}
             description={description}
             location={location}
             picturePath={picturePath}

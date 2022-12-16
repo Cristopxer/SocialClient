@@ -4,6 +4,7 @@ import { useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import UserWidget from "scenes/widgets/UserWidget";
 import PostWidget from "scenes/widgets/PostWidget";
+import FeedWidget from "scenes/widgets/FeedWidget";
 
 function HomePage() {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
@@ -27,6 +28,7 @@ function HomePage() {
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           <PostWidget picturePath={picturePath} />
+          <FeedWidget userId={_id} />
         </Box>
         {isNonMobileScreens && <Box flexBasis="26%"></Box>}
       </Box>
