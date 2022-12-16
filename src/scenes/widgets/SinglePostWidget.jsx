@@ -47,7 +47,7 @@ const SinglePostWidget = ({
         body: JSON.stringify({ userId: loggedInUserId }),
       }
     );
-    const updatedPost = await response.json();
+    const updatedPost = await response.json();    
     dispatch(setPost({ post: updatedPost }));
   };
 
