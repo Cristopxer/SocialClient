@@ -11,7 +11,8 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const navigate = useNavigate();
   const { _id } = useSelector((state) => state.user);
   const token = useSelector((state) => state.token);
-  const friends = useSelector((state) => state.user.friends);
+  const friends = useSelector((state) => state.user.friends);    
+  const isUserPost = _id === friendId;
 
   const { palette } = useTheme();
   const primaryLight = palette.primary.light;
@@ -19,7 +20,8 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
 
-  const isFriend = friends.find((friend) => friend._id === friendId);
+  const isFriend = friends.find((friend) => friend._id === friendId || friend === friendId);
+//   console.log(isFriend);
 
   const patchFriend = async () => {
     const response = await fetch(
@@ -64,19 +66,23 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
           </Typography>
         </Box>
       </FlexBetween>
-      <IconButton
-        onClick={() => patchFriend()}
-        sx={{
-          backgroundColor: primaryLight,
-          p: "0.6rem",
-        }}
-      >
-        {isFriend ? (
-          <PersonRemoveOutlined sx={{ color: primaryDark }} />
-        ) : (
-          <PersonAddOutlined sx={{ color: primaryDark }} />
-        )}
-      </IconButton>
+      {isUserPost ? (
+        <></>
+      ) : (
+        <IconButton
+          onClick={() => patchFriend()}
+          sx={{
+            backgroundColor: primaryLight,
+            p: "0.6rem",
+          }}
+        >
+          {isFriend ? (
+            <PersonRemoveOutlined sx={{ color: primaryDark }} />
+          ) : (
+            <PersonAddOutlined sx={{ color: primaryDark }} />
+          )}
+        </IconButton>
+      )}
     </FlexBetween>
   );
 };

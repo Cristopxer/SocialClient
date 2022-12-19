@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import UserWidget from "scenes/widgets/UserWidget";
 import PostWidget from "scenes/widgets/PostWidget";
 import FeedWidget from "scenes/widgets/FeedWidget";
+import AdvertWidget from "scenes/widgets/AdvertWidget";
 
 function HomePage() {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
@@ -30,7 +31,9 @@ function HomePage() {
           <PostWidget picturePath={picturePath} />
           <FeedWidget userId={_id} />
         </Box>
-        {isNonMobileScreens && <Box flexBasis="26%"></Box>}
+        {isNonMobileScreens && <Box flexBasis="26%">
+          <AdvertWidget />
+          </Box>}
       </Box>
     </Box>
   );

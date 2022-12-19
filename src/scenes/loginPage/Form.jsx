@@ -94,6 +94,7 @@ const Form = () => {
           token: loggedIn.token,
         })
       );
+      // Add User logged Friend to the state      
       navigate("/home");
     }
   };
