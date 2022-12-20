@@ -13,8 +13,8 @@ const FeedWidget = ({ userId, isProfile = false }) => {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
-
-    const data = await response.json();    
+    
+    const data = await response.json();        
     dispatch(setPosts({ posts: data }));
   };
 
@@ -27,8 +27,8 @@ const FeedWidget = ({ userId, isProfile = false }) => {
       }
     );
 
-    const data = await response.json();    
-    dispatch(setPosts({ post: data }));
+    const data = await response.json();      
+    dispatch(setPosts({ posts: data }));
   };
 
   useEffect(() => {
