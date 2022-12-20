@@ -31,7 +31,7 @@ const AdvertWidget = () => {
           href="https://github.com/Cristopxer"
           target="_blank"
           rel="noreferrer"
-          style={{ "text-decoration": "none", color: dark }}
+          style={{ textDecoration: "none", color: dark }}
         >
           Github - Cristopxer<Typography color={medium}></Typography>
         </a>
