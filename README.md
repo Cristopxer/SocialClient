@@ -36,5 +36,40 @@ You can check the project here: [Social App backend](https://github.com/Cristopx
 
 ## Take a tour
 
+### Create an account
+
+![register](https://user-images.githubusercontent.com/49459233/212769961-f459b090-b095-409e-86ec-aac0303f5e4f.png)
+
+### Login
+
+![login](https://user-images.githubusercontent.com/49459233/212769986-c8e63b3b-82f1-44ab-a45a-316f14811f2a.png)
+
+### Home
+
+![home](https://user-images.githubusercontent.com/49459233/212770009-9bdc90dc-1146-4b87-93a1-f9f2505d903d.png)
+
+### Home dark theme
+
+![display_dark](https://user-images.githubusercontent.com/49459233/212770027-26ecaaa2-7035-4291-ae78-3c30a6340f34.png)
+
+### Profile view
+
+![people profile view](https://user-images.githubusercontent.com/49459233/212770259-622ffa26-e8cc-41cf-8f09-5183854f4dbe.png)
+
+### Posts
+
+![display_light](https://user-images.githubusercontent.com/49459233/212770162-0cd3c20c-8ef6-41d0-a35c-f30509810d4a.png)
+
+### See comments and like
+
+![see comments and like](https://user-images.githubusercontent.com/49459233/212770193-e0fd726e-a7df-413b-b5c3-207193a8dad1.png)
+
+### Friends list
+
+![add remove friends](https://user-images.githubusercontent.com/49459233/212770218-e9a5289c-bf42-4d40-bfea-aa8306d9695f.png)
+
+
+
+
 
 
