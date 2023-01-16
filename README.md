@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Social App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the unkown, welcome to social app. Here you will find a React web app for posting and share with friends, you can create and login to your profile, switch between dark and light theme, create posts with images, like other people's posts, see comments, add and remove friends, see indivual profiles and a movil response view. This is built under the MERN Stack (MongoDB, Express, React, Node.js) with it's authentication for login, local storage and styled thank to the tailwind css framework.
 
-## Available Scripts
+## Social App backend
 
-In the project directory, you can run:
+The API to handle all backend operations is built with Node.js, Express framework and Mongoose ORM, following best practices like password encryptation with bcrypt and token management with jsonwebtoken, authentication required for some routes with a custom middleware. It has a Models, Controllers and Routes structure.
+You can check the project here: [Social App backend](https://github.com/Cristopxer/SocialAPI)
 
-### `npm start`
+## Technologies and libraries
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Data Storage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* MongoDB
 
-### `npm test`
+### Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Node.js
+* Express
+* mongoose
+* bcrypt
+* jsonwebtoken
+* morgan
+* helmet
+* multer
 
-### `npm run build`
+### Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* React
+* redux-toolkit
+* react-router 
+* react-dropzone
+* yup
+* formik
+* mui-icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Take a tour
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Create an account
 
-### `npm run eject`
+![register](https://user-images.githubusercontent.com/49459233/212769961-f459b090-b095-409e-86ec-aac0303f5e4f.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Login
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![login](https://user-images.githubusercontent.com/49459233/212769986-c8e63b3b-82f1-44ab-a45a-316f14811f2a.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Home
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![home](https://user-images.githubusercontent.com/49459233/212770009-9bdc90dc-1146-4b87-93a1-f9f2505d903d.png)
 
-## Learn More
+### Home dark theme
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![display_dark](https://user-images.githubusercontent.com/49459233/212770027-26ecaaa2-7035-4291-ae78-3c30a6340f34.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Profile view
 
-### Code Splitting
+![people profile view](https://user-images.githubusercontent.com/49459233/212770259-622ffa26-e8cc-41cf-8f09-5183854f4dbe.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Posts
 
-### Analyzing the Bundle Size
+![display_light](https://user-images.githubusercontent.com/49459233/212770162-0cd3c20c-8ef6-41d0-a35c-f30509810d4a.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### See comments and like
 
-### Making a Progressive Web App
+![see comments and like](https://user-images.githubusercontent.com/49459233/212770193-e0fd726e-a7df-413b-b5c3-207193a8dad1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Friends list
 
-### Advanced Configuration
+![add remove friends](https://user-images.githubusercontent.com/49459233/212770218-e9a5289c-bf42-4d40-bfea-aa8306d9695f.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
